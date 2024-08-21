@@ -1,14 +1,17 @@
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+
+import Main from "./components/Slider/Main";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar />
+      <Slider /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Main />} />
+        {/* <Route path="/" element={<Home />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
