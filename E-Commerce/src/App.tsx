@@ -1,17 +1,14 @@
 import Footer from "./components/Footer";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Main from "./components/Slider/Main";
+import FilteredProducts from "./components/FilteredProducts/FilteredProducts";
 
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <Navbar />
-      <Slider /> */}
       <Routes>
         <Route path="/" element={<Main />} />
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/products/:type" element={<FilteredProducts />} />
       </Routes>
       <Footer />
     </BrowserRouter>

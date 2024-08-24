@@ -1,4 +1,5 @@
 import Navbar from "../Navbar";
+import NavigateButtons from "../NavigateButtons/NavigateButtons";
 import Slider from "./Slider";
 
 
@@ -8,6 +9,7 @@ const Main = () => {
     <div>
      <Navbar />
       <Slider />
+      <NavigateButtons />
       
     </div>
   );
