@@ -2,6 +2,8 @@ import { Button } from "@material-tailwind/react";
 import clothes from "../../assets/images/clothes.jpg"
 import { useDispatch } from "react-redux";
 import { filterProducts } from "../../features/slices/ProductsSlice";
+import { Link } from "react-router-dom";
+
 
 const NavigateButtons = () => {
   const buttons = [
@@ -22,15 +24,17 @@ const dispatch = useDispatch()
         {buttons?.map((button: any, index: any) => {
           return (
             <div key={index} className="mr-4">
+              <Link to={`/products/${button}`}>
               <Button 
                 color="gray"
                 size="lg"
                 variant="outlined"
                 ripple={true}
                 className="text-black hover:bg-gray-300 duration-300 ease-in-out"
-                onClick = {() => dispatch(filterProducts(buttons))}>
+                onClick = {() => dispatch(filterProducts(button))}>
                 {button}
                 </Button>
+                </Link>
             </div>
           );
         })}

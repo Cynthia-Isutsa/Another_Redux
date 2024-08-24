@@ -20,10 +20,10 @@ export const ProductsSlice = createSlice({
   initialState,
   reducers: {
     filterProducts(state, action)  {
-        console.log({action})
+        //console.log({action})
         try {
             const filter = storeData.filter((item: any) => {
-              console.log({item})
+              //console.log({item})
               return (
                 item.type === action.payload)
             })
